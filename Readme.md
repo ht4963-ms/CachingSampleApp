@@ -1,28 +1,6 @@
----
-page_type: sample
-description: This sample shows how to enhance app loading times during meetings with side panel caching, improving user experience in Microsoft Teams.
-products:
-- office-teams
-- office
-- office-365
-languages:
-- Nodejs
-extensions:
- contentType: samples
- createdDate: "11/11/2022 11:50:25 AM"
-urlFragment: officedev-microsoft-teams-samples-app-caching-in-meetings-nodejs
+## Caching Sample App for Teams
 
----
-
-## App Caching in Meetings
-
-This sample demonstrates how to enhance the loading speed of applications within Microsoft Teams during ongoing meetings. Specifically, it illustrates the caching mechanism for apps loaded in the side panel, allowing users to quickly access previously visited apps without delay.
-
-**Interaction with App**
-![App-Cache](Images/AppCacheSample.gif)  
-
-**Change of App theme when Teams theme changes to (light,dark and contrast)**.
-![App-Cache-ChangeTheme](Images/AppCacheThemeChange.gif) 
+This sample demonstrates how to implement a Microsoft Teams app using caching. It has capabilities for personal app, as well as configurable apps, useful for configuring multiple tabs in a chat or channel. It can be extended for testing of various scenarios, such as fast switch between tabs, media access, etc.
  
 ## Prerequisites
 
@@ -58,18 +36,7 @@ The simplest way to run this sample in Teams is to use Teams Toolkit for Visual 
    devtunnel host -p 3978 --allow-anonymous
    ```
 
-2) Clone the repository
-
-    ```bash
-    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-    ```
-
-   **Open your project in Visual Studio Code (Optional Step)**
-
-    - Launch Visual Studio code
-    - File -> Open Folder
-    - Navigate to `samples/app-cache-meetings` folder
-    - Select `nodejs` folder and open it
+2) Set up
 
    Install node modules (Either open any local terminal inside your `nodejs` folder or open Visual Studio Code terminal by opening the project in Visual Studio Code)
 
@@ -93,32 +60,7 @@ The simplest way to run this sample in Teams is to use Teams Toolkit for Visual 
     - Sideload the app In meetings (Supported scopes)
      
 
-## Running the sample
-
-**Add the App in meeting**.
-![Set-Up-Tab](Images/1.Set_Up_Tab.png)
-
-**App Caching Sideloaded  :**
-![participant context](Images/2.TabOneInitilized.png)
-
-**AppCache in first tab with Unique Id Loaded :** 
-![Team Context](Images/2.TabOneInitilized.png)
-
-**AppCache in second tab with Unique Id Loaded :** 
-![Team Context](Images/3.TabTwo.png)
-
-**Teams Theme Changes To Dark :** 
-![Team Context](Images/T1-dark-Theme.PNG)
-
-**Teams Theme Changes To Light :** 
-![Team Context](Images/T2.light-theme.PNG)
-
-**Teams Theme Changes To Contrast :** 
-![Team Context](Images/T1-contrast-theme.PNG)
-
 > Note open debug panel **Proto Task Manager** ( `Ctrl+Shift+Alt+8` on Windows, `Cmd+Shift+Option+8` on Mac), navigate to App Caching section you should see these apps getting cached/loaded. Non-cacheable apps will not appear in this panel.
-
-**Note** In Teams T1, there is no `light theme`, only we get two themes in meetings (`dark` and `contrast`). By default Teams T1 default theme is `dark`. and where as in Teams T2 we get three themes. Default theme is light and remaining other two themes are `dark` and `contrast`.
 
 
 ## Further reading
@@ -129,4 +71,3 @@ The simplest way to run this sample in Teams is to use Teams Toolkit for Visual 
 [Handle theme change](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault#handle-theme-change)
 
 
-<img src="https://pnptelemetry.azurewebsites.net/microsoft-teams-samples/samples/app-cache-meetings-nodejs" />
