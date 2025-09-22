@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "version": "1.0.0",
+  "manifestVersion": "1.19",
+  "id": "f03aca28-e6f5-4a17-b90c-e9a770c3fa1c",
+  "name": {
+    "short": "Device Permissions",
+    "full": "App Caching with Device Permissions"
+  },
+  "developer": {
+    "name": "Microsoft",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "description": {
+    "short": "Optimize app loading times in Teams meetings with caching.",
+    "full": "This sample demonstrates how to optimize the loading speed of an app in Microsoft Teams by utilizing caching for applications accessed during a meeting, with the app presented as a side panel for enhanced user experience."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#FFFFFF",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://ht-test-tab-app-local.ngrok.io/configure",
+      "canUpdateConfiguration": true,
+      "scopes": ["groupChat", "team"],
+      "context": [
+        "channelTab",
+        "meetingChatTab",
+        "meetingDetailsTab",
+        "meetingSidePanel",
+        "privateChatTab"
+      ]
+    }
+  ],
+  "staticTabs": [
+    {
+      "entityId": "home",
+      "name": "Home",
+      "contentUrl": "https://ht-test-tab-app-local.ngrok.io/personal",
+      "websiteUrl": "https://ht-test-tab-app-local.ngrok.io/personal",
+      "scopes": ["personal"]
+    }
+  ],
+  "validDomains": ["ht-test-tab-app-local.ngrok.io"],
+  "showLoadingIndicator": true,
+  "devicePermissions": ["media"]
+}
+
